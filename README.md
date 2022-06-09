@@ -1,3 +1,6 @@
+# New heading
+Actually using this now!
+
 # class_practice
 A space for me to practice utilizing classes and version control in programming
 
