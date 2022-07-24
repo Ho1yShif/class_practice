@@ -55,11 +55,4 @@ class Queue_l:
 		return str(self.items)
 
 if __name__ == '__main__':
-	q = Queue_l()
-	
-	q.enqueue('I')
-	q.enqueue('Love')
-	q.enqueue('Zack')
-
-	print(q.dequeue(), q.dequeue(), q.dequeue())
-	print(q.is_empty())
+	pass
