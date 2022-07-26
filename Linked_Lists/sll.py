@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 
-# Sequential Linked List Node Object
+# Singly Linked List Node Object
 class SLLNode:
 
 	def __init__(self, data):
