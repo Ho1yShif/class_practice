@@ -36,18 +36,57 @@ class SLL:
 		return not self.head
 	
 	def add_front(self, new_data):
-		pass
+		"""Add a Node whose data is the new_data argument to the front of the SLL """
+		temp = SLLNode(new_data)
+		temp.set_next(self.head)
+		self.head = temp
 
 	def size(self):
-		pass
+		"""Traverses the SLL and returns an int value representing the number of nodes
+		Time Complexity is O(n) because we need to visit each node in order to count it"""
+		size = 0
+		if self.is_empty():
+			return 0
+		current = self.head
+		
+		while current is not None:
+			size += 1
+			current = current.get_next()
+		return size
 
 	def search(self, data):
-		pass
+		"""Traverses the linked list and returns True if the data argument is
+		present in one of the nodes. Otherwise, it returns False.
+		Time Complexity is O(n) because we need to visit each node in order to count it"""
+		if self.is_empty():
+			return "Linked List is empty. No nodes to search."
+		current = self.head
+		while current is not None:
+			if current.get_data() == data:
+				return True
+			current = current.get_next()
+		return False
 
 	def remove(self, data):
-		pass
+		"""Removes the first occurrence of a Node that contains the data argument
+		as its self.data variable. Returns nothing.
+		Time Complexity is O(n) because we need to visit each node in order to find
+		the node to remove"""
+		if self.is_empty():
+			return "Linked List is empty. No nodes to remove."
+		current = self.head
+		previous = None
+		found = False
+		while not found:
+			if current.get_data() == data:
+				found = True
+			elif current.get_next() == None:
+				return "A node with that data value is not present"
+			else:
+				previous = current
+				current = current.get_next()
 		
-
-
-if __name__ == '__main__':
-	print(bool(None))
+		if previous is None:
+			self.head = current.get_next()
+		else:
+			previous.set_next(current.get_next())
