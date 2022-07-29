@@ -33,7 +33,7 @@ class SLL:
 		return "SLLNode object: head={}".format(self.head)
 	
 	def is_empty(self):
-		return not self.head
+		return self.head is None
 	
 	def add_front(self, new_data):
 		"""Add a Node whose data is the new_data argument to the front of the SLL """

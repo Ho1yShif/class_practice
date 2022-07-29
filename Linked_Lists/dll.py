@@ -40,7 +40,7 @@ class DLL:
 		return "<DLL object: head={}>".format(self.head)
 	
 	def is_empty(self):
-		return not self.head
+		return self.head is None
 
 	def size(self):
 		"""Traverses the DLL and returns an int value representing the number of nodes
