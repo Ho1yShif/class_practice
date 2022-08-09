@@ -1,5 +1,5 @@
 # class_practice
-A space for me to practice utilizing classes and version control in programming
+A space for me to practice utilizing classes
 
 ## Nick Project Ideas:
 - Practice graphs: Make a friends database showing connections between characters in Community
