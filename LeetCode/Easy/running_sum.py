@@ -4,6 +4,9 @@ Given an array nums. We define a running sum of an array as runningSum[i] = sum(
 Return the running sum of nums.
 """
 
+# Input
+nums = [1, 2, 3, 4]
+
 class Solution(object):
 	def runningSum(self, nums):
 		"""
