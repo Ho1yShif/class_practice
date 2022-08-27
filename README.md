@@ -1,5 +1,5 @@
 # class_practice
-A space for me to practice utilizing classes and version control in programming
+A space for me to practice utilizing classes
 
 ## Nick Project Ideas:
 - Practice graphs: Make a friends database showing connections between characters in Community
@@ -9,6 +9,5 @@ A space for me to practice utilizing classes and version control in programming
 - Class with attributes about me ([Idea](https://www.linkedin.com/in/alyssa-fedgo-mph/overlay/background-image/))
 - Decision Tree Class
 - Binary Tree Traversal Class
-- Stack Class
 - Heap Class
 - Graph Class
