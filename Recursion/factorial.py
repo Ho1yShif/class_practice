@@ -15,7 +15,7 @@ return 1 * factorial(0) = 1
 return 2 * factorial(1) = 2
 return 3 * factorial(2) = 6
 
-Final value: 6
+Final value for factorial(3): 6
 """
 
 def factorial(n):
