@@ -14,8 +14,8 @@ class Solution(object):
 		:rtype: List[int]
 		"""
 		length = len(nums)
-		comp = [sum(nums[:i+1]) for i in range(length)]
-		return comp
+		out = [sum(nums[:i+1]) for i in range(length)]
+		return out
 
 """
 Solution Stats
