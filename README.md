@@ -16,6 +16,10 @@ Thanks for taking the time to check this out :)
 - Heap Class
 - Graph Class
 
+## Python Libraries to Learn
+- SK Opt
+- LazyPredict
+
 ## Learning Projects
 - Portfolio
 - Practice graphs: Make a friends database showing connections between characters in Community
