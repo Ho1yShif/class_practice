@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Strings {
 	public static void main(String[] args) {
-		// Practicing concatenation data types
+		// Practicing concatenation; strings are just collections of chars
 		String fName = "Zack";
 		String lName = "Ovits";
 		// System.out.println(fName + " " + lName);
