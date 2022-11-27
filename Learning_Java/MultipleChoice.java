@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Switch {
+public class MultipleChoice {
 	public static void main(String[] args) {
 		// Challenge: Create a multiple choice question to practice if-else control flow
 		// My response: learn switch statements instead
