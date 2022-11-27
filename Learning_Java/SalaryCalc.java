@@ -8,6 +8,7 @@ public class SalaryCalc {
 		
 		Scanner input = new Scanner(System.in);
 		input.next();
+		input.close();
 		System.out.println("PSA: I wish I got a CompSci degree!");
 	}
 	
