@@ -38,14 +38,23 @@ public class StudentProfile {
 
 	// Based on this GPA calculator: https://gpacalculator.net/wp-content/uploads/2012/07/grade-point-equivalent.png
 	public String Grade() {
-		if (this.gpa > 3.67) {return "A";} else if
-		(this.gpa > 3.33) {return "A-";} else if
-		(this.gpa > 3.00) {return "B+";} else if
-		(this.gpa > 2.67) {return "B-";} else if
-		(this.gpa > 2.33) {return "C+";} else if
-		(this.gpa > 2.00) {return "C";} else if
-		(this.gpa > 1.00) {return "D";} else
-		{return "F";}
+		if (this.gpa > 3.67) {
+			return "A";
+		} else if (this.gpa > 3.33) {
+			return "A-";
+		} else if (this.gpa > 3.00){
+			return "B+";
+		} else if (this.gpa > 2.67) {
+			return "B-";
+		} else if (this.gpa > 2.33) {
+			return "C+";
+		} else if (this.gpa > 2.00) {
+			return "C";
+		} else if (this.gpa > 1.00) {
+			return "D";
+		} else {
+			return "F";
+		}
 	}
 
 	public int IncrementGradYear() {

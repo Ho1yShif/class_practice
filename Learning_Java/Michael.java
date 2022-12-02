@@ -7,5 +7,7 @@ public class Michael {
 		3) chaining (a < b && < c)
 		4) casting/converting
 		5) deep dive into public vs. private variables */
+	
+		
 	} 
 }
