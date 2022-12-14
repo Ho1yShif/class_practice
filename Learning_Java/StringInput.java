@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Episode5 {
+public class StringInput {
 	// Name
 	public static void main(String[] args) {
 	System.out.println("Enter your first name ");
