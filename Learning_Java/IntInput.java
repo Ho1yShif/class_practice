@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
-public class NumInput {
-	// Name
+public class IntInput {
 	public static void main(String[] args) {
 	// Int
 	System.out.println("How many books has John Green published?");
