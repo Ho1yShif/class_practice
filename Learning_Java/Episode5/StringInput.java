@@ -1,3 +1,4 @@
+package Episode5;
 import java.util.Scanner;
 
 public class StringInput {
