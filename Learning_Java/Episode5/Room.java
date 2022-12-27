@@ -10,7 +10,7 @@ public class Room {
 	int roomLength = scan.nextInt();
 
 	System.out.println("What is the width of your room in feet?");
-	double roomWidth = scan.nextInt();
+	double roomWidth = scan.nextDouble();
 
 	double roomArea = roomLength * roomWidth;
 	System.out.println("The area of your room is " + roomArea + " square feet");
