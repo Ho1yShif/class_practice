@@ -55,6 +55,6 @@ class Solution(object):
 
 """
 Solution Stats
-Runtime: 71 ms, faster than 82.45% of Python online submissions for Contains Duplicate.
-Memory Usage: 13.8 MB, less than 85.19% of Python online submissions for Contains Duplicate.
+Runtime: 71 ms, faster than 82.45% of Python online submissions
+Memory Usage: 13.8 MB, less than 85.19% of Python online submissions
 """
