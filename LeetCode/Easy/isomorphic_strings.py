@@ -39,6 +39,6 @@ if __name__ == '__main__':
 
 """
 Solution Stats
-Runtime: 47 ms, faster than 61.21% of Python online submissions for Isomorphic Strings.
-Memory Usage: 16.2 MB, less than 23.30% of Python online submissions for Isomorphic Strings.
+Runtime: 24 ms, faster than 99.95% of Python online submissions for Isomorphic Strings.
+Memory Usage: 14.2 MB, less than 87.75% of Python online submissions for Isomorphic Strings.
 """
