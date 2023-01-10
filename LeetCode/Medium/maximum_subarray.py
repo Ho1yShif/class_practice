@@ -29,6 +29,6 @@ if __name__ == '__main__':
 
 """
 Solution Stats
-Runtime: 753 ms, faster than 86.75% of Python online submissions for Contains Duplicate.
-Memory Usage: 28.6 MB, less than 85.19% of Python online submissions for Contains Duplicate.
+Runtime: 753 ms, faster than 86.75% of Python online submissions
+Memory Usage: 28.6 MB, less than 11.77% of Python online submissions
 """
