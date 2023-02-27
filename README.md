@@ -11,6 +11,7 @@ In this repo, you'll find:
 Thanks for taking the time to check this out :)
 
 ## More Project Ideas
+- Create app for [values exercise](http://webmedia.jcu.edu/advising/files/2016/02/Core-Values-Exercise.pdf)
 - Practice graphs: Make a friends database showing connections between characters in Community
 - Tree practice: Huffman encoding ([Link](https://www.geeksforgeeks.org/huffman-coding-greedy-algo-3/))
 - Class with attributes about me ([Idea](https://www.linkedin.com/in/alyssa-fedgo-mph/overlay/background-image/))
