@@ -1,7 +1,7 @@
 # class_practice
 Hi everyone,
 
-This respository is a space for me to practice programming. At the time I created this, I had just started diving deeper into classes, so I called it 'class_practice'.
+This respository is a space for me to practice programming. At the time I created this, I had just started diving deeper into classes, so I called it `class_practice`.
 
 In this repo, you'll find:
 - Problems from LinkedIn Learning courses
