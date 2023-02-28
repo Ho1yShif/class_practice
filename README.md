@@ -10,7 +10,8 @@ In this repo, you'll find:
 
 Thanks for taking the time to check this out :)
 
-## More Project Ideas
+## Project Ideas
+- Script to automate emails to recruiters
 - Create app for [values exercise](http://webmedia.jcu.edu/advising/files/2016/02/Core-Values-Exercise.pdf)
 - Practice graphs: Make a friends database showing connections between characters in Community
 - Tree practice: Huffman encoding ([Link](https://www.geeksforgeeks.org/huffman-coding-greedy-algo-3/))
