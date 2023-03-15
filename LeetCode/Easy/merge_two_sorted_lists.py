@@ -13,8 +13,13 @@ Output: [1,1,2,3,4,4]
 list1 = [1,2,4]
 list2 = [1,3,4]
 
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
 class Solution:
-     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
+     def mergeTwoLists(self, list1, list2) -> ListNode:
         # Create two pointers, one to keep track of loop and one to return later
         cur = dummy = ListNode()
         while list1 and list2:               
@@ -34,7 +39,7 @@ class Solution:
 
 if __name__ == '__main__':
 	sol = Solution()
-	ans = sol.romanToInt(list1, list2)
+	ans = sol.mergeTwoLists(list1, list2)
 	print(ans)
 
 """
