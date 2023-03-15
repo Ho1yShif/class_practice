@@ -26,7 +26,7 @@ class Solution(object):
 
 if __name__ == '__main__':
 	sol = Solution()
-	ans = sol.searchInsert(nums, target)
+	ans = sol.lengthOfLastWord_v1(s)
 	print(ans)
 
 """
