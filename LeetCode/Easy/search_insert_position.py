@@ -11,19 +11,22 @@ target = 5
 
 class Solution(object):
 	def searchInsert(self, nums, target) -> int:
-		if target not in nums:
-			if target > nums[-1]:
-				return len(nums)
-			if target < nums[0]:
-				return 0
-			if (target - 1) in nums:
-				return (nums.index(target - 1)) + 1
-			for idx, val in enumerate(nums):
-				if val > target:
-					return idx
-
-		else:
+		if target in nums:
 			return nums.index(target)
+
+		# If target is greater than the last index, return the array length
+		if target > nums[-1]:
+			return len(nums)
+		# If target is less than the first index, return 0
+		if target < nums[0]:
+			return 0
+		# If the lower consecutive number to target is in the array, return that index + 1
+		if (target - 1) in nums:
+			return (nums.index(target - 1)) + 1
+		# Otherwise, loop through until you find a value larger than target
+		for idx, val in enumerate(nums):
+			if val > target:
+				return idx
 
 if __name__ == '__main__':
 	sol = Solution()
