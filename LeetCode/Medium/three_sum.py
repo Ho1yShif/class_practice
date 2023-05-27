@@ -30,56 +30,58 @@ Constraints:
 3 <= nums.length <= 3000
 -10^5 <= nums[i] <= 10^5"""
 
-# Problem's definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
+from typing import List
 
 class Solution:
-    def threeSum(self, nums: List[int]) -> List[List[int]]:
-        # First account for 3-element case
-        if len(nums) == 3:
-            # Guard clause to check equality to 0
-            if sum(nums) != 0:
-                return []
-            else:
-                return [nums]
+	def threeSum(self, nums: List[int]) -> List[List[int]]:
+		# First account for 3-element case
+		if len(nums) == 3:
+			# Guard clause to check equality to 0
+			if sum(nums) != 0:
+				return []
+			else:
+				return [nums]
 
-        output = []
-        sorted_nums = sorted(nums)
-        # Iterate until third-to-last element
-        for i, num in enumerate(sorted_nums[:-2]):
-            # Skip duplicates
-            if i > 0 and sorted_nums[i] == sorted_nums[i - 1]:
-                continue
+		output = []
+		sorted_nums = sorted(nums)
+		# Iterate until third-to-last element
+		for i, num in enumerate(sorted_nums[:-2]):
+			# Skip duplicates
+			if i > 0 and sorted_nums[i] == sorted_nums[i - 1]:
+				continue
 
-            left = i + 1
-            right = len(sorted_nums) - 1
+			left = i + 1
+			right = len(sorted_nums) - 1
 
-            while left < right:
-                check_sum = sorted_nums[i] + sorted_nums[left] + sorted_nums[right]
+			while left < right:
+				check_sum = sorted_nums[i] + sorted_nums[left] + sorted_nums[right]
 
-                if check_sum == 0:
-                    triplet = [sorted_nums[i], sorted_nums[left], sorted_nums[right]]
-                    output.append(triplet)
-                    left += 1
-                    right -= 1
+				if check_sum == 0:
+					triplet = [sorted_nums[i], sorted_nums[left], sorted_nums[right]]
+					output.append(triplet)
+					left += 1
+					right -= 1
 
-                    # Skip duplicates
-                    while left < right and sorted_nums[left] == sorted_nums[left - 1]:
-                        left += 1
+					# Skip duplicates
+					while left < right and sorted_nums[left] == sorted_nums[left - 1]:
+						left += 1
 
-                    # Skip duplicates
-                    while left < right and sorted_nums[right] == sorted_nums[right + 1]:
-                        right -= 1
+					# Skip duplicates
+					while left < right and sorted_nums[right] == sorted_nums[right + 1]:
+						right -= 1
 
-                elif check_sum < 0:
-                    left += 1
-                else:
-                    right -= 1
+				elif check_sum < 0:
+					left += 1
+				else:
+					right -= 1
 
-        return output
+		return output
+
+if __name__ == '__main__':
+	nums = [-1,0,1,2,-1,-4]
+	sol = Solution()
+	ans = sol.threeSum(nums)
+	print(ans)
 
 """
 Solution Stats
