@@ -18,7 +18,7 @@ class Solution(object):
 		# Find the index of the next value in nums where the right sum matches the left, else return -1
 		pivot_index = next((i for i in range(length) if (sum(nums[:i+1]) == sum(nums[i:]))), -1)
 		
-		return str(pivot_index)
+		return pivot_index
 
 if __name__ == '__main__':
 	sol = Solution()
