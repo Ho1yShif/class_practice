@@ -33,55 +33,48 @@ Constraints:
 from typing import List
 
 class Solution:
-	def threeSum(self, nums: List[int]) -> List[List[int]]:
-		# First account for 3-element case
-		if len(nums) == 3:
-			# Guard clause to check equality to 0
-			if sum(nums) != 0:
-				return []
-			else:
-				return [nums]
+    def threeSum(self, nums: List[int]) -> List[List[int]]:
+        # Account for 3-element case
+        if len(nums) == 3:
+            return [nums] if sum(nums) == 0 else []
 
-		output = []
-		sorted_nums = sorted(nums)
-		# Iterate until third-to-last element
-		for i, num in enumerate(sorted_nums[:-2]):
-			# Skip duplicates
-			if i > 0 and sorted_nums[i] == sorted_nums[i - 1]:
-				continue
+        nums.sort()
+        output = []
+        n = len(nums)
 
-			left = i + 1
-			right = len(sorted_nums) - 1
+        for i in range(n - 2):
+            # Skip duplicate values for i by checking left neighbor
+            if i > 0 and nums[i] == nums[i - 1]:
+                continue
 
-			while left < right:
-				check_sum = sorted_nums[i] + sorted_nums[left] + sorted_nums[right]
+            left = i + 1
+            right = n - 1
 
-				if check_sum == 0:
-					triplet = [sorted_nums[i], sorted_nums[left], sorted_nums[right]]
-					output.append(triplet)
-					left += 1
-					right -= 1
+            while left < right:
+                total = nums[i] + nums[left] + nums[right]
+                if total == 0:
+                    output.append([nums[i], nums[left], nums[right]])
+                    # Skip duplicate values for left using left neighbor
+                    while left < right and nums[left] == nums[left + 1]:
+                        left += 1
+                    # Skip duplicate values for right using left neighbor
+                    while left < right and nums[right] == nums[right - 1]:
+                        right -= 1
+                    left += 1
+                    right -= 1
+                elif total < 0:
+                    left += 1
+                elif total > 0:
+                    right -= 1
 
-					# Skip duplicates
-					while left < right and sorted_nums[left] == sorted_nums[left - 1]:
-						left += 1
+        return output
 
-					# Skip duplicates
-					while left < right and sorted_nums[right] == sorted_nums[right + 1]:
-						right -= 1
-
-				elif check_sum < 0:
-					left += 1
-				else:
-					right -= 1
-
-		return output
 
 if __name__ == '__main__':
-	nums = [-1,0,1,2,-1,-4]
-	sol = Solution()
-	ans = sol.threeSum(nums)
-	print(ans)
+    nums = [-1,0,1,2,-1,-4]
+    sol = Solution()
+    ans = sol.threeSum(nums)
+    print(ans)
 
 """
 Solution Stats
