@@ -61,6 +61,6 @@ if __name__ == '__main__':
 
 """
 TwoSumTwoPointer Solution Stats
-Runtime: 2311 ms, faster than 27.48% of Python online submissions
-Memory Usage: 14.9 MB, less than 76.30% of Python online submissions
+Runtime: 145 ms, faster than 25.48% of Python online submissions
+Memory Usage: 17.3 MB, less than 31.90% of Python online submissions
 """
