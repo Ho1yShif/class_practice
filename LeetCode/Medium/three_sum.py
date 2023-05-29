@@ -78,6 +78,6 @@ if __name__ == '__main__':
 
 """
 Solution Stats
-Runtime: 1536 ms, faster than 50.26%% of Python online submissions
-Memory Usage: 20.5 MB, less than 36.74%% of Python online submissions
+Runtime: 1633 ms, faster than 44.77% of Python online submissions
+Memory Usage: 20.5 MB, less than 39.65% of Python online submissions
 """
