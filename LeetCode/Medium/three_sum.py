@@ -50,6 +50,7 @@ class Solution:
             left = i + 1
             right = n - 1
 
+            # Nested two sum solution using two pointers
             while left < right:
                 total = nums[i] + nums[left] + nums[right]
                 if total == 0:
