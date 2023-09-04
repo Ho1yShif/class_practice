@@ -1,11 +1,16 @@
 from django.shortcuts import render
 from django.http import Http404
 from .models import Notes
-from django.views.generic import ListView
+from django.views.generic import ListView, DetailView
 
 class NotesListView(ListView):
 	model = Notes
 	context_object_name = 'notes'
+	template_name = 'notes/notes_list.html'
+
+class NotesDetailView(DetailView):
+	model = Notes
+	content_object_name = 'note'
 
 def detail(request, pk):
 	try:
