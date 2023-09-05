@@ -10,7 +10,7 @@ class NotesListView(ListView):
 
 class NotesDetailView(DetailView):
 	model = Notes
-	content_object_name = 'note'
+	context_object_name = 'note'
 
 def detail(request, pk):
 	try:
