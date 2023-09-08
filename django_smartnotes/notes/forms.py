@@ -6,6 +6,9 @@ class NotesForm(forms.ModelForm):
 	class Meta():
 		model = Notes
 		fields = ('title', 'text')
+		labels = {
+			'text': 'Write your thoughts here:'
+		}
 	
 	"""Validate that the title contains the word Django"""
 	def clean_title(self):
