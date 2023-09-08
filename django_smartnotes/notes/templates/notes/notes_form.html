@@ -3,13 +3,13 @@
 {% block content %}
 
 <!--TODO: Fix
-    The submit button takes me to http://127.0.0.1:8000/smart/notes/smart/notes instead of  http://127.0.0.1:8000/smart/notes
+	The submit button takes me to http://127.0.0.1:8000/smart/notes/smart/notes instead of  http://127.0.0.1:8000/smart/notes
 -->
 <form action="{% url 'notes.new' %}" method='POST'>{% csrf_token %}
-    {{ form }}
-    <button type="submit" class="btn btn-primary my-5">
-        Submit
-    </button>
+	{{ form }}
+	<button type="submit" class="btn btn-primary my-5">
+		Submit
+	</button>
 </form>
 
 {% endblock %}
