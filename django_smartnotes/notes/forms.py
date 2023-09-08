@@ -8,7 +8,7 @@ class NotesForm(forms.ModelForm):
 		model = Notes
 		fields = ('title', 'text')
 	
-	"""TODO: Fix this validation that's not working"""
+	"""Validate that the title contains the word Django"""
 	def clean_title(self):
 		title = self.cleaned_data['title']
 		if 'Django' not in title:
