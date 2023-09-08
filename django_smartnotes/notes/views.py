@@ -2,7 +2,12 @@ from .models import Notes
 from .forms import NotesForm
 from django.http import Http404
 from django.shortcuts import render
-from django.views.generic import CreateView, ListView, DetailView
+from django.views.generic import CreateView, UpdateView, ListView, DetailView
+
+class NotesUpdateView(UpdateView):
+	model = Notes
+	success_url = '/smart/notes'
+	form_class = NotesForm
 
 class NotesCreateView(CreateView):
 	model = Notes
