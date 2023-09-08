@@ -6,7 +6,6 @@ from django.views.generic import CreateView, ListView, DetailView
 class NotesCreateView(CreateView):
 	model = Notes
 	fields = ['title', 'text']
-	"""Modified this to redirect to the notes list page after creating a new note via the form"""
 	success_url = '/smart/notes'
 
 class NotesListView(ListView):
