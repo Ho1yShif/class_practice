@@ -7,7 +7,6 @@ class NotesForm(forms.ModelForm):
 	class Meta():
 		model = Notes
 		fields = ('title', 'text')
-		form_class = NotesForm
 	
 	"""TODO: Fix this validation that's not working"""
 	def clean_title(self):
