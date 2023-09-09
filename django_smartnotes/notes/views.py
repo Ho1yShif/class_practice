@@ -1,3 +1,5 @@
+from typing import Any
+from django.db.models.query import QuerySet
 from django.http import Http404
 from django.shortcuts import render
 from django.views.generic.edit import DeleteView
@@ -32,6 +34,10 @@ class NotesListView(LoginRequiredMixin, ListView):
 	"""
 	login_url = "/admin"
 
+	"""Override get_queryset to only show notes that belong to the current user"""
+	def get_queryset(self):
+		return self.request.user.notes.all()
+	
 class NotesDetailView(DetailView):
 	model = Notes
 	context_object_name = 'note'
