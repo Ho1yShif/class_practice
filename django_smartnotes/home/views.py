@@ -1,6 +1,5 @@
 from datetime import datetime
-from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import redirect
 from django.views.generic import TemplateView
 from django.views.generic.edit import CreateView
 from django.contrib.auth.forms import UserCreationForm
@@ -11,6 +10,12 @@ class SignupView(CreateView):
 	form_class = UserCreationForm
 	template_name = 'home/register.html'
 	success_url = '/smart/notes'
+
+	"""Override the built-in get method so that only unauthenticated users can access the signup page"""
+	def get(self, request, *args, **kwargs):
+		if self.request.user.is_authenticated:
+			return redirect('notes.list')
+		return super().get(request, *args, **kwargs)
 
 class LogoutInterfaceView(LogoutView):
 	template_name = 'home/logout.html'
