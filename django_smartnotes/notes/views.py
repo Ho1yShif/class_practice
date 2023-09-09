@@ -1,8 +1,10 @@
-from .models import Notes
-from .forms import NotesForm
 from django.http import Http404
 from django.shortcuts import render
+from django.views.generic.edit import DeleteView
 from django.views.generic import CreateView, UpdateView, ListView, DetailView
+
+from .models import Notes
+from .forms import NotesForm
 
 class NotesUpdateView(UpdateView):
 	model = Notes
