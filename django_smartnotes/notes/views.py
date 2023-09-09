@@ -6,6 +6,10 @@ from django.views.generic import CreateView, UpdateView, ListView, DetailView
 from .models import Notes
 from .forms import NotesForm
 
+class NotesDeleteView(DeleteView):
+	model = Notes
+	success_url = '/smart/notes'
+
 class NotesUpdateView(UpdateView):
 	model = Notes
 	success_url = '/smart/notes'
