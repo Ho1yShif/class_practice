@@ -9,16 +9,15 @@
 	<body>
 		<nav class="navbar navbar-dark bg-dark">
 			<div class="ms-auto">
-				{% if user.isauthenticated %}
+			{% if user.is_authenticated %}
 				<a href="{% url 'logout' %}" class="btn btn-outline-light me-1">
-					Logout
+				Logout
 				</a>
-				{% else %}
+			{% else %}
 				<a href="{% url 'login' %}" class="btn btn-outline-light me-1">
-					Login
+				Login
 				</a>
-				{% endif %}
-				
+			{% endif %}
 			</div>
 		</nav>
 
