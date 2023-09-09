@@ -2,6 +2,7 @@
 
 {% block content %}
 	<h1>Welcome to SmartNotes!</h1>
+	<!--TODO: Make this show a PST timezone-->
 	<p>Today is {{today}}</p>
 	<a href="{% url 'notes.list' %}" class="btn btn-primary">Check out these smart notes!</a>
 {% endblock %}

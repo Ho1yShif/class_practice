@@ -1,4 +1,5 @@
 from datetime import datetime
+from django.shortcuts import render
 from django.shortcuts import redirect
 from django.views.generic import TemplateView
 from django.views.generic.edit import CreateView
@@ -30,3 +31,11 @@ class HomeView(TemplateView):
 class AuthorizedView(LoginRequiredMixin, TemplateView):
 	template_name = 'home/authorized.html'
 	login_url = '/admin'
+
+		# FILEPATH: /Users/shifra.isaacs/Documents/Repos/class_practice/django_smartnotes/home/views.py
+
+def welcome(request):
+	context = {
+		'datetime': datetime.datetime.now()
+	}
+	return render(request, 'home/welcome.html', context)
